@@ -53,10 +53,12 @@ public class playerController : MonoBehaviour {
 		print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 		print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
 		print("Their relative velocity is " + collisionInfo.relativeVelocity);
-		if(collisionInfo.collider.name == "coinBlock") {
+		if(collisionInfo.collider.name == "goal") {
 			endGame = true;
+		//if(endGame) {
 			print ("ENDING GAME!");
-			//SceneManager.LoadScene("Assets/scene"); //untested
+			//SceneManager.LoadScene("scene");
+			SceneManager.LoadScene("end");
 		}
 	}
 }
