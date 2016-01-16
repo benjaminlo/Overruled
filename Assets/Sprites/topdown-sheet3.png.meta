@@ -1,0 +1,916 @@
+fileFormatVersion: 2
+guid: f876359c0ccbf0c4ead6805a728c909a
+timeCreated: 1452969929
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: topdown-sheet3_0
+    21300002: topdown-sheet3_1
+    21300004: topdown-sheet3_2
+    21300006: topdown-sheet3_3
+    21300008: topdown-sheet3_4
+    21300010: topdown-sheet3_5
+    21300012: topdown-sheet3_6
+    21300014: topdown-sheet3_7
+    21300016: topdown-sheet3_8
+    21300018: topdown-sheet3_9
+    21300020: topdown-sheet3_10
+    21300022: topdown-sheet3_11
+    21300024: topdown-sheet3_12
+    21300026: topdown-sheet3_13
+    21300028: topdown-sheet3_14
+    21300030: topdown-sheet3_15
+    21300032: topdown-sheet3_16
+    21300034: topdown-sheet3_17
+    21300036: topdown-sheet3_18
+    21300038: topdown-sheet3_19
+    21300040: topdown-sheet3_20
+    21300042: topdown-sheet3_21
+    21300044: topdown-sheet3_22
+    21300046: topdown-sheet3_23
+    21300048: topdown-sheet3_24
+    21300050: topdown-sheet3_25
+    21300052: topdown-sheet3_26
+    21300054: topdown-sheet3_27
+    21300056: topdown-sheet3_28
+    21300058: topdown-sheet3_29
+    21300060: topdown-sheet3_30
+    21300062: topdown-sheet3_31
+    21300064: topdown-sheet3_32
+    21300066: topdown-sheet3_33
+    21300068: topdown-sheet3_34
+    21300070: topdown-sheet3_35
+    21300072: topdown-sheet3_36
+    21300074: topdown-sheet3_37
+    21300076: topdown-sheet3_38
+    21300078: topdown-sheet3_39
+    21300080: topdown-sheet3_40
+    21300082: topdown-sheet3_41
+    21300084: topdown-sheet3_42
+    21300086: topdown-sheet3_43
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: topdown-sheet3_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: topdown-sheet3_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 47.5}
+        - {x: -27, y: 38.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 38.5}
+        - {x: 12, y: 47.5}
+    - name: topdown-sheet3_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: topdown-sheet3_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: topdown-sheet3_4
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 39.5}
+        - {x: -27, y: -42.5}
+        - {x: -22, y: -47.5}
+        - {x: 25, y: -47.5}
+        - {x: 27, y: -44.5}
+        - {x: 27, y: 42.5}
+        - {x: 21, y: 47.5}
+    - name: topdown-sheet3_5
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: topdown-sheet3_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: topdown-sheet3_7
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 351
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 47.5}
+        - {x: -26.5, y: 45.5}
+        - {x: -26.5, y: -40.5}
+        - {x: -16.5, y: -47.5}
+        - {x: 9.5, y: -47.5}
+        - {x: 22.5, y: -40.5}
+        - {x: 26.5, y: -16.5}
+        - {x: 26.5, y: 40.5}
+        - {x: 11.5, y: 47.5}
+    - name: topdown-sheet3_8
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 351
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 47.5}
+        - {x: -26.5, y: 45.5}
+        - {x: -26.5, y: -40.5}
+        - {x: -16.5, y: -47.5}
+        - {x: 9.5, y: -47.5}
+        - {x: 22.5, y: -40.5}
+        - {x: 26.5, y: -16.5}
+        - {x: 26.5, y: 40.5}
+        - {x: 11.5, y: 47.5}
+    - name: topdown-sheet3_9
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 351
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 47.5}
+        - {x: -26.5, y: 45.5}
+        - {x: -26.5, y: -40.5}
+        - {x: -16.5, y: -47.5}
+        - {x: 9.5, y: -47.5}
+        - {x: 22.5, y: -40.5}
+        - {x: 26.5, y: -16.5}
+        - {x: 26.5, y: 40.5}
+        - {x: 11.5, y: 47.5}
+    - name: topdown-sheet3_10
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 351
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 47.5}
+        - {x: -26.5, y: 45.5}
+        - {x: -26.5, y: -40.5}
+        - {x: -16.5, y: -47.5}
+        - {x: 9.5, y: -47.5}
+        - {x: 22.5, y: -40.5}
+        - {x: 26.5, y: -16.5}
+        - {x: 26.5, y: 40.5}
+        - {x: 11.5, y: 47.5}
+    - name: topdown-sheet3_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_13
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_14
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_15
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_16
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_17
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 234
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 54}
+        - {x: -27, y: 34}
+        - {x: -27, y: -51}
+        - {x: -22, y: -54}
+        - {x: 27, y: -54}
+        - {x: 27, y: 41}
+        - {x: 6, y: 54}
+    - name: topdown-sheet3_18
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 245
+        width: 53
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 48.5}
+        - {x: -26.5, y: 27.5}
+        - {x: -26.5, y: -30.5}
+        - {x: -17.5, y: -48.5}
+        - {x: 26.5, y: -48.5}
+        - {x: 26.5, y: 33.5}
+        - {x: 8.5, y: 48.5}
+    - name: topdown-sheet3_19
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 245
+        width: 53
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 48.5}
+        - {x: -26.5, y: 27.5}
+        - {x: -26.5, y: -30.5}
+        - {x: -17.5, y: -48.5}
+        - {x: 26.5, y: -48.5}
+        - {x: 26.5, y: 33.5}
+        - {x: 8.5, y: 48.5}
+    - name: topdown-sheet3_20
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 245
+        width: 53
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 48.5}
+        - {x: -26.5, y: 27.5}
+        - {x: -26.5, y: -30.5}
+        - {x: -17.5, y: -48.5}
+        - {x: 26.5, y: -48.5}
+        - {x: 26.5, y: 33.5}
+        - {x: 8.5, y: 48.5}
+    - name: topdown-sheet3_21
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 245
+        width: 53
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 48.5}
+        - {x: -26.5, y: 27.5}
+        - {x: -26.5, y: -30.5}
+        - {x: -17.5, y: -48.5}
+        - {x: 26.5, y: -48.5}
+        - {x: 26.5, y: 33.5}
+        - {x: 8.5, y: 48.5}
+    - name: topdown-sheet3_22
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 117
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46.5}
+        - {x: -17, y: 45.5}
+        - {x: -20, y: 10.5}
+        - {x: -17, y: -2.5}
+        - {x: -40, y: -22.5}
+        - {x: -40, y: -29.5}
+        - {x: -15, y: -46.5}
+        - {x: 34, y: -46.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 38.5}
+        - {x: 30, y: 46.5}
+    - name: topdown-sheet3_23
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 117
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 46}
+        - {x: -40, y: 4}
+        - {x: -40, y: -46}
+        - {x: 40, y: -46}
+        - {x: 40, y: 46}
+    - name: topdown-sheet3_24
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 117
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46.5}
+        - {x: -17, y: 45.5}
+        - {x: -20, y: 10.5}
+        - {x: -17, y: -2.5}
+        - {x: -40, y: -22.5}
+        - {x: -40, y: -29.5}
+        - {x: -15, y: -46.5}
+        - {x: 34, y: -46.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 38.5}
+        - {x: 30, y: 46.5}
+    - name: topdown-sheet3_25
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 117
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46.5}
+        - {x: -17, y: 45.5}
+        - {x: -20, y: 10.5}
+        - {x: -17, y: -2.5}
+        - {x: -40, y: -22.5}
+        - {x: -40, y: -29.5}
+        - {x: -15, y: -46.5}
+        - {x: 34, y: -46.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 38.5}
+        - {x: 30, y: 46.5}
+    - name: topdown-sheet3_26
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 117
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 46}
+        - {x: -19, y: 46}
+        - {x: -40, y: 10}
+        - {x: -40, y: -46}
+        - {x: 40, y: -46}
+        - {x: 40, y: 34}
+        - {x: 37, y: 43}
+    - name: topdown-sheet3_27
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 117
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46.5}
+        - {x: -17, y: 45.5}
+        - {x: -20, y: 10.5}
+        - {x: -17, y: -2.5}
+        - {x: -40, y: -22.5}
+        - {x: -40, y: -29.5}
+        - {x: -15, y: -46.5}
+        - {x: 34, y: -46.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 38.5}
+        - {x: 30, y: 46.5}
+    - name: topdown-sheet3_28
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 117
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46.5}
+        - {x: -17, y: 45.5}
+        - {x: -20, y: 10.5}
+        - {x: -17, y: -2.5}
+        - {x: -40, y: -22.5}
+        - {x: -40, y: -29.5}
+        - {x: -15, y: -46.5}
+        - {x: 34, y: -46.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 38.5}
+        - {x: 30, y: 46.5}
+    - name: topdown-sheet3_29
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 119
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 45.5}
+        - {x: -40, y: -0.5}
+        - {x: -40, y: -45.5}
+        - {x: 20, y: -45.5}
+        - {x: 40, y: -26.5}
+        - {x: 40, y: 35.5}
+        - {x: 25, y: 45.5}
+    - name: topdown-sheet3_30
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 119
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 45.5}
+        - {x: -40, y: -0.5}
+        - {x: -40, y: -45.5}
+        - {x: 20, y: -45.5}
+        - {x: 40, y: -26.5}
+        - {x: 40, y: 35.5}
+        - {x: 25, y: 45.5}
+    - name: topdown-sheet3_31
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 119
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 45.5}
+        - {x: -40, y: -0.5}
+        - {x: -40, y: -45.5}
+        - {x: 20, y: -45.5}
+        - {x: 40, y: -26.5}
+        - {x: 40, y: 35.5}
+        - {x: 25, y: 45.5}
+    - name: topdown-sheet3_32
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 119
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 45.5}
+        - {x: -40, y: -0.5}
+        - {x: -40, y: -45.5}
+        - {x: 20, y: -45.5}
+        - {x: 40, y: -26.5}
+        - {x: 40, y: 35.5}
+        - {x: 25, y: 45.5}
+    - name: topdown-sheet3_33
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -46.5}
+        - {x: 22, y: -46.5}
+        - {x: 40, y: -42.5}
+        - {x: 40, y: 19.5}
+        - {x: 31, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -40, y: 42.5}
+        - {x: -40, y: -37.5}
+    - name: topdown-sheet3_34
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 46}
+        - {x: -40, y: 46}
+        - {x: -40, y: -46}
+        - {x: 15, y: -46}
+        - {x: 40, y: -33}
+        - {x: 40, y: 4}
+        - {x: 37, y: 25}
+    - name: topdown-sheet3_35
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -46.5}
+        - {x: 22, y: -46.5}
+        - {x: 40, y: -42.5}
+        - {x: 40, y: 19.5}
+        - {x: 31, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -40, y: 42.5}
+        - {x: -40, y: -37.5}
+    - name: topdown-sheet3_36
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -46.5}
+        - {x: 22, y: -46.5}
+        - {x: 40, y: -42.5}
+        - {x: 40, y: 19.5}
+        - {x: 31, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -40, y: 42.5}
+        - {x: -40, y: -37.5}
+    - name: topdown-sheet3_37
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 0
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 46}
+        - {x: -31, y: 46}
+        - {x: -40, y: 40}
+        - {x: -40, y: -42}
+        - {x: -38, y: -46}
+        - {x: 17, y: -46}
+        - {x: 40, y: -38}
+        - {x: 40, y: -23}
+        - {x: 29, y: -19}
+    - name: topdown-sheet3_38
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 0
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -46.5}
+        - {x: 22, y: -46.5}
+        - {x: 40, y: -42.5}
+        - {x: 40, y: 19.5}
+        - {x: 31, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -40, y: 42.5}
+        - {x: -40, y: -37.5}
+    - name: topdown-sheet3_39
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 0
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -46.5}
+        - {x: 22, y: -46.5}
+        - {x: 40, y: -42.5}
+        - {x: 40, y: 19.5}
+        - {x: 31, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -40, y: 42.5}
+        - {x: -40, y: -37.5}
+    - name: topdown-sheet3_40
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 2
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 45.5}
+        - {x: -40, y: 36.5}
+        - {x: -40, y: -15.5}
+        - {x: -31, y: -45.5}
+        - {x: 40, y: -45.5}
+        - {x: 40, y: 7.5}
+        - {x: 23, y: 45.5}
+    - name: topdown-sheet3_41
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 2
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 45.5}
+        - {x: -40, y: 36.5}
+        - {x: -40, y: -15.5}
+        - {x: -31, y: -45.5}
+        - {x: 40, y: -45.5}
+        - {x: 40, y: 7.5}
+        - {x: 23, y: 45.5}
+    - name: topdown-sheet3_42
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 2
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 45.5}
+        - {x: -40, y: 36.5}
+        - {x: -40, y: -15.5}
+        - {x: -31, y: -45.5}
+        - {x: 40, y: -45.5}
+        - {x: 40, y: 7.5}
+        - {x: 23, y: 45.5}
+    - name: topdown-sheet3_43
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 45.5}
+        - {x: -40, y: 36.5}
+        - {x: -40, y: -15.5}
+        - {x: -31, y: -45.5}
+        - {x: 40, y: -45.5}
+        - {x: 40, y: 7.5}
+        - {x: 23, y: 45.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
