@@ -25,7 +25,23 @@ public class playerController : NetworkBehaviour {
 	void Start () { 
 		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
 	}
-	
+
+	void CmdMoveUp () {
+		transform.position += Vector3.up * speed * Time.deltaTime;
+	}
+
+	void CmdMoveDown () {
+		transform.position += Vector3.down * speed * Time.deltaTime;
+	}
+
+	void CmdMoveLeft () {
+		transform.position += Vector3.left * speed * Time.deltaTime;
+	}
+
+	void CmdMoveRight () {
+		transform.position += Vector3.right * speed * Time.deltaTime;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (!isLocalPlayer)
@@ -34,31 +50,30 @@ public class playerController : NetworkBehaviour {
 		index = index % spritesF.Length;
 
 		if (Input.GetKey (moveUp)) {
-			transform.position += Vector3.up * speed * Time.deltaTime;
+			CmdMoveUp ();
 			spriteRenderer.sprite = spritesB [index];
 		}
 		if (Input.GetKey (moveDown)) {
-			transform.position += Vector3.down * speed * Time.deltaTime;
+			CmdMoveDown ();
 			spriteRenderer.sprite = spritesF [index];
 		}
 		if (Input.GetKey (moveLeft)) {
-			transform.position += Vector3.left * speed * Time.deltaTime;
+			CmdMoveLeft ();
 			spriteRenderer.sprite = spritesL [index];
 		}
 		if (Input.GetKey (moveRight)) {
-			transform.position += Vector3.right * speed * Time.deltaTime;
+			CmdMoveRight ();
 			spriteRenderer.sprite = spritesR [index];
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D collisionInfo)
-	{
+	void OnCollisionEnter2D(Collision2D collisionInfo)	{
 		print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 		print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
 		print("Their relative velocity is " + collisionInfo.relativeVelocity);
-		if(collisionInfo.collider.name == "goal") {
+		if(collisionInfo.collider.name == "goal")
 			endGame = true;
-		//if(endGame) {
+		if(endGame) {
 			print ("ENDING GAME!");
 			//SceneManager.LoadScene("scene");
 			SceneManager.LoadScene("end");
