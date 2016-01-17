@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class playerController : MonoBehaviour {
+public class playerController : NetworkBehaviour {
 
 	public KeyCode moveUp;
 	public KeyCode moveDown;
@@ -27,6 +28,8 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isLocalPlayer)
+			return;
 		int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
 		index = index % spritesF.Length;
 
