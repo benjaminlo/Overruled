@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 76d7a85b5afc82c45859833b5a1bc2bc
+timeCreated: 1454552141
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_0
+    21300002: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_1
+    21300004: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_2
+    21300006: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_3
+    21300008: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_4
+    21300010: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_5
+    21300012: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_6
+    21300014: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_7
+    21300016: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_8
+    21300018: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_9
+    21300020: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_10
+    21300022: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_11
+    21300024: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_12
+    21300026: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_13
+    21300028: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_14
+    21300030: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_15
+    21300032: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_16
+    21300034: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_17
+    21300036: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_18
+    21300038: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_19
+    21300040: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_20
+    21300042: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_21
+    21300044: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_22
+    21300046: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_23
+    21300048: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_24
+    21300050: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_25
+    21300052: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_26
+    21300054: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_27
+    21300056: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_28
+    21300058: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_29
+    21300060: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_30
+    21300062: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_31
+    21300064: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_32
+    21300066: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_33
+    21300068: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_34
+    21300070: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1144
+        width: 180
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 87.5}
+        - {x: 33, y: 89.5}
+        - {x: -41, y: 89.5}
+        - {x: -61, y: 81.5}
+        - {x: -90, y: 34.5}
+        - {x: -90, y: -38.5}
+        - {x: -57, y: -86.5}
+        - {x: -34, y: -89.5}
+        - {x: 57, y: -89.5}
+        - {x: 73, y: -85.5}
+        - {x: 90, y: -37.5}
+        - {x: 90, y: 47.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1144
+        width: 156
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 89.5}
+        - {x: -78, y: 52.5}
+        - {x: -78, y: -48.5}
+        - {x: -45, y: -89.5}
+        - {x: 46, y: -89.5}
+        - {x: 78, y: -79.5}
+        - {x: 78, y: 52.5}
+        - {x: 45, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1144
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 89.5}
+        - {x: -57, y: 81.5}
+        - {x: -57, y: -56.5}
+        - {x: -49, y: -89.5}
+        - {x: 31, y: -89.5}
+        - {x: 57, y: -62.5}
+        - {x: 57, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_3
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1144
+        width: 36
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 89.5}
+        - {x: -18, y: 88.5}
+        - {x: -18, y: -88.5}
+        - {x: -17, y: -89.5}
+        - {x: 17, y: -89.5}
+        - {x: 18, y: -88.5}
+        - {x: 18, y: 88.5}
+        - {x: 17, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1144
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 89.5}
+        - {x: -57, y: -71.5}
+        - {x: -31, y: -89.5}
+        - {x: 34, y: -89.5}
+        - {x: 57, y: -69.5}
+        - {x: 57, y: 86.5}
+        - {x: 51, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_5
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1144
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: 89.5}
+        - {x: -55.5, y: 89.5}
+        - {x: -77.5, y: 58.5}
+        - {x: -77.5, y: -51.5}
+        - {x: -53.5, y: -87.5}
+        - {x: -38.5, y: -89.5}
+        - {x: 39.5, y: -89.5}
+        - {x: 73.5, y: -68.5}
+        - {x: 77.5, y: -40.5}
+        - {x: 77.5, y: 74.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_6
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1144
+        width: 180
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: 84.5}
+        - {x: 51, y: 89.5}
+        - {x: -45, y: 89.5}
+        - {x: -90, y: 50.5}
+        - {x: -90, y: -31.5}
+        - {x: -83, y: -52.5}
+        - {x: -40, y: -89.5}
+        - {x: 35, y: -89.5}
+        - {x: 85, y: -59.5}
+        - {x: 90, y: -40.5}
+        - {x: 90, y: 45.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_7
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 896
+        width: 180
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 86.5}
+        - {x: 39, y: 89.5}
+        - {x: -46, y: 89.5}
+        - {x: -90, y: 51.5}
+        - {x: -90, y: -29.5}
+        - {x: -69, y: -70.5}
+        - {x: -44, y: -89.5}
+        - {x: 37, y: -89.5}
+        - {x: 79, y: -74.5}
+        - {x: 90, y: -50.5}
+        - {x: 90, y: 33.5}
+        - {x: 80, y: 67.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_8
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 896
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.5, y: 89.5}
+        - {x: -39.5, y: 89.5}
+        - {x: -53.5, y: 86.5}
+        - {x: -75.5, y: 56.5}
+        - {x: -77.5, y: 45.5}
+        - {x: -77.5, y: -44.5}
+        - {x: -54.5, y: -89.5}
+        - {x: 46.5, y: -89.5}
+        - {x: 77.5, y: -51.5}
+        - {x: 77.5, y: 57.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_9
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 896
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 89.5}
+        - {x: -57, y: -84.5}
+        - {x: -40, y: -89.5}
+        - {x: 41, y: -89.5}
+        - {x: 57, y: -83.5}
+        - {x: 57, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_10
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 896
+        width: 36
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 89.5}
+        - {x: -18, y: -89.5}
+        - {x: 18, y: -89.5}
+        - {x: 18, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 896
+        width: 113
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 89.5}
+        - {x: -56.5, y: 55.5}
+        - {x: -56.5, y: -64.5}
+        - {x: -37.5, y: -89.5}
+        - {x: 43.5, y: -89.5}
+        - {x: 56.5, y: -70.5}
+        - {x: 56.5, y: 51.5}
+        - {x: 41.5, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_12
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 896
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64.5, y: 89.5}
+        - {x: -77.5, y: 86.5}
+        - {x: -77.5, y: -55.5}
+        - {x: -72.5, y: -64.5}
+        - {x: -37.5, y: -89.5}
+        - {x: 32.5, y: -89.5}
+        - {x: 42.5, y: -88.5}
+        - {x: 77.5, y: -48.5}
+        - {x: 77.5, y: 49.5}
+        - {x: 48.5, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_13
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 896
+        width: 179
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: 89.5}
+        - {x: -39.5, y: 89.5}
+        - {x: -78.5, y: 60.5}
+        - {x: -89.5, y: 44.5}
+        - {x: -89.5, y: -41.5}
+        - {x: -87.5, y: -57.5}
+        - {x: -68.5, y: -89.5}
+        - {x: 67.5, y: -89.5}
+        - {x: 85.5, y: -52.5}
+        - {x: 89.5, y: -41.5}
+        - {x: 89.5, y: 48.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_14
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 648
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 90}
+        - {x: -34, y: 90}
+        - {x: -73, y: 67}
+        - {x: -90, y: 51}
+        - {x: -90, y: -44}
+        - {x: -82, y: -80}
+        - {x: -47, y: -90}
+        - {x: 50, y: -90}
+        - {x: 90, y: -57}
+        - {x: 90, y: 43}
+        - {x: 75, y: 83}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_15
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 648
+        width: 156
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68, y: 90}
+        - {x: -78, y: 52}
+        - {x: -78, y: -53}
+        - {x: -70, y: -66}
+        - {x: -42, y: -90}
+        - {x: 34, y: -90}
+        - {x: 54, y: -85}
+        - {x: 78, y: -36}
+        - {x: 78, y: 54}
+        - {x: 47, y: 90}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_16
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 648
+        width: 114
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 90}
+        - {x: -40, y: 90}
+        - {x: -48, y: 87}
+        - {x: -57, y: 62}
+        - {x: -57, y: -48}
+        - {x: -49, y: -90}
+        - {x: 31, y: -90}
+        - {x: 55, y: -53}
+        - {x: 57, y: -46}
+        - {x: 57, y: 58}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_17
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 648
+        width: 37
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 90}
+        - {x: -18.5, y: -88}
+        - {x: -16.5, y: -90}
+        - {x: 16.5, y: -90}
+        - {x: 18.5, y: -88}
+        - {x: 18.5, y: 90}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_18
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 648
+        width: 114
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 90}
+        - {x: -57, y: 81}
+        - {x: -57, y: -67}
+        - {x: -48, y: -90}
+        - {x: 39, y: -90}
+        - {x: 57, y: -60}
+        - {x: 57, y: 62}
+        - {x: 35, y: 90}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_19
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 648
+        width: 155
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.5, y: 90}
+        - {x: -77.5, y: 90}
+        - {x: -77.5, y: -77}
+        - {x: -61.5, y: -90}
+        - {x: 58.5, y: -90}
+        - {x: 77.5, y: -46}
+        - {x: 77.5, y: 40}
+        - {x: 69.5, y: 65}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_20
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 648
+        width: 179
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 71.5, y: 90}
+        - {x: -50.5, y: 90}
+        - {x: -66.5, y: 87}
+        - {x: -85.5, y: 61}
+        - {x: -89.5, y: 41}
+        - {x: -89.5, y: -68}
+        - {x: -87.5, y: -74}
+        - {x: -42.5, y: -90}
+        - {x: 50.5, y: -90}
+        - {x: 57.5, y: -86}
+        - {x: 89.5, y: -52}
+        - {x: 89.5, y: 44}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_21
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 401
+        width: 180
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 89.5}
+        - {x: -56, y: 89.5}
+        - {x: -90, y: 56.5}
+        - {x: -90, y: -47.5}
+        - {x: -82, y: -61.5}
+        - {x: -45, y: -89.5}
+        - {x: 46, y: -89.5}
+        - {x: 90, y: -41.5}
+        - {x: 90, y: 35.5}
+        - {x: 83, y: 63.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_22
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 401
+        width: 156
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77, y: 89.5}
+        - {x: -78, y: 81.5}
+        - {x: -78, y: -56.5}
+        - {x: -73, y: -63.5}
+        - {x: -49, y: -89.5}
+        - {x: 42, y: -89.5}
+        - {x: 72, y: -80.5}
+        - {x: 78, y: -51.5}
+        - {x: 78, y: 49.5}
+        - {x: 57, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_23
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 401
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 89.5}
+        - {x: -57, y: 84.5}
+        - {x: -57, y: -67.5}
+        - {x: -46, y: -89.5}
+        - {x: 36, y: -89.5}
+        - {x: 57, y: -56.5}
+        - {x: 57, y: 79.5}
+        - {x: 29, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_24
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 401
+        width: 36
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 89.5}
+        - {x: -18, y: -89.5}
+        - {x: 18, y: -89.5}
+        - {x: 18, y: 88.5}
+        - {x: 17, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_25
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 401
+        width: 113
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 89.5}
+        - {x: -42.5, y: 89.5}
+        - {x: -56.5, y: 50.5}
+        - {x: -56.5, y: -66.5}
+        - {x: -39.5, y: -89.5}
+        - {x: 32.5, y: -89.5}
+        - {x: 56.5, y: -58.5}
+        - {x: 56.5, y: 50.5}
+        - {x: 47.5, y: 86.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_26
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 401
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58.5, y: 89.5}
+        - {x: -56.5, y: 89.5}
+        - {x: -68.5, y: 72.5}
+        - {x: -77.5, y: 39.5}
+        - {x: -77.5, y: -52.5}
+        - {x: -54.5, y: -89.5}
+        - {x: 43.5, y: -89.5}
+        - {x: 69.5, y: -73.5}
+        - {x: 77.5, y: -38.5}
+        - {x: 77.5, y: 84.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_27
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 401
+        width: 179
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 85.5, y: 63.5}
+        - {x: 31.5, y: 89.5}
+        - {x: -40.5, y: 89.5}
+        - {x: -89.5, y: 60.5}
+        - {x: -89.5, y: -59.5}
+        - {x: -37.5, y: -89.5}
+        - {x: 37.5, y: -89.5}
+        - {x: 78.5, y: -63.5}
+        - {x: 89.5, y: -46.5}
+        - {x: 89.5, y: 42.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_28
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 153
+        width: 180
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 89.5}
+        - {x: -42, y: 89.5}
+        - {x: -90, y: 73.5}
+        - {x: -90, y: -54.5}
+        - {x: -83, y: -72.5}
+        - {x: -36, y: -89.5}
+        - {x: 48, y: -89.5}
+        - {x: 65, y: -76.5}
+        - {x: 90, y: -32.5}
+        - {x: 90, y: 46.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_29
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 153
+        width: 156
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 89.5}
+        - {x: -45, y: 89.5}
+        - {x: -78, y: 56.5}
+        - {x: -78, y: -55.5}
+        - {x: -44, y: -89.5}
+        - {x: 56, y: -89.5}
+        - {x: 78, y: -41.5}
+        - {x: 78, y: 40.5}
+        - {x: 76, y: 54.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_30
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 153
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 89.5}
+        - {x: -57, y: 64.5}
+        - {x: -57, y: -61.5}
+        - {x: -54, y: -83.5}
+        - {x: -47, y: -89.5}
+        - {x: 28, y: -89.5}
+        - {x: 55, y: -80.5}
+        - {x: 57, y: -77.5}
+        - {x: 57, y: 57.5}
+        - {x: 45, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_31
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 153
+        width: 36
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 89.5}
+        - {x: -18, y: 88.5}
+        - {x: -18, y: -88.5}
+        - {x: -17, y: -89.5}
+        - {x: 16, y: -89.5}
+        - {x: 18, y: -87.5}
+        - {x: 18, y: 88.5}
+        - {x: 17, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_32
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 153
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 89.5}
+        - {x: -57, y: -79.5}
+        - {x: -48, y: -85.5}
+        - {x: -36, y: -89.5}
+        - {x: 38, y: -89.5}
+        - {x: 57, y: -55.5}
+        - {x: 57, y: 55.5}
+        - {x: 37, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_33
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 153
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 89.5}
+        - {x: -77.5, y: 53.5}
+        - {x: -77.5, y: -56.5}
+        - {x: -47.5, y: -89.5}
+        - {x: 53.5, y: -89.5}
+        - {x: 77.5, y: -56.5}
+        - {x: 77.5, y: 43.5}
+        - {x: 49.5, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_34
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 153
+        width: 179
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 89.5}
+        - {x: -89.5, y: 50.5}
+        - {x: -89.5, y: -34.5}
+        - {x: -72.5, y: -63.5}
+        - {x: -41.5, y: -89.5}
+        - {x: 47.5, y: -89.5}
+        - {x: 89.5, y: -41.5}
+        - {x: 89.5, y: 47.5}
+        - {x: 46.5, y: 89.5}
+    - name: star-gold-silver-coins-rotation-set-sprite-game-graphics-49715046_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1300
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -650, y: 45}
+        - {x: -650, y: -45}
+        - {x: 650, y: -45}
+        - {x: 650, y: 45}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
