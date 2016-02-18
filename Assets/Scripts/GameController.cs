@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour {
 	 
 		rules = new int[10];
 
-		rules [0] = 1;
+		rules [0] = 0; // Background
+		rules [1] = 2; // Player speed
+		rules [2] = 2; // Player size
 	}
 }

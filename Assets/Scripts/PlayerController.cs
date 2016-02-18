@@ -8,9 +8,18 @@ public class Boundary{
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed;
 	public Boundary boundary;
+
 	public string horizontalAxis, verticalAxis;
+
+	private float activeDuration;
+	private float cooldown;
+	private float nextAction;
+	private float activeTimer;
+
+	// Abilities and attributes
+	private float speed;
+	private Vector3 size;
 
 	void FixedUpdate(){
 		float moveHorizontal = Input.GetAxis (horizontalAxis);
@@ -26,13 +35,55 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp (body.position.y, boundary.yMin, boundary.yMax)
 		);
 	}
+
 	// Use this for initialization
 	void Start () {
-	
+		nextAction = 0.0f;
+		activeTimer = 0.0f;
+		switch (GameController.rules [1]) { // Passive ability
+			case 0:
+				speed = 5f;
+				break;
+			case 1:
+				speed = 0.5f;
+				break;
+			case 2:
+				speed = 10f;
+				break;
+			default:
+				speed = 5f;
+				break;
+		}
+		switch (GameController.rules [2]) { // Active ability
+			case 0:
+				size = Vector3.one;
+				break;
+			case 1:
+				size = new Vector3 (0.5f, 0.5f, 0);
+				cooldown = 3f;
+				activeDuration = 3f;
+				break;
+			case 2:
+				size = new Vector3 (5f, 5f, 0);
+				cooldown = 3f;
+				activeDuration = 3f;
+				break;
+			default:
+				size = Vector3.one;
+				break;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetButton ("Fire1") && Time.time > nextAction) {
+			nextAction = Time.time + cooldown;
+			activeTimer = activeDuration;
+			transform.localScale = size; // Perform action
+		}
+		if (activeTimer < 0) { 
+			transform.localScale = Vector3.one; // Reset active ability
+		} else
+			activeTimer -= Time.deltaTime;
 	}
 }
