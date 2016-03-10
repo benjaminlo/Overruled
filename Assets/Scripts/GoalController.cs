@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class goalController : MonoBehaviour {
+public class GoalController : MonoBehaviour {
 
 	Texture2D iceBackground;
 

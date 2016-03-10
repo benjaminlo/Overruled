@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour {
 
 		rules [0] = 0;
 
+		rules [1] = 2; // Player speed
+		rules [2] = 2; // Player size
+
 		DontDestroyOnLoad (gameObject);
 	}
 }
