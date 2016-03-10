@@ -8,6 +8,8 @@ public class GoalController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		iceBackground = Resources.Load ("IceBackground") as Texture2D;
 		GameObject.Find ("Background").GetComponent<Renderer> ().material.mainTexture = iceBackground;
+		GameController.runRuleSelection = true;
 		Destroy (gameObject);
+
 	}
 }

@@ -14,7 +14,6 @@ public class BackgroundController : MonoBehaviour {
 
 		switch (GameController.rules [0]) {
 		case 0:
-			GameObject.Find ("Background").GetComponent<Renderer> ().material.mainTexture = forestBackground;
 			break;
 		case 1:
 			iceBackground = Resources.Load ("IceBackground") as Texture2D;
