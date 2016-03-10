@@ -2,48 +2,48 @@
 using System.Collections;
 using UnityEngine.UI;
 
-
 public class GameController : MonoBehaviour {
 
-	public static int[] rules;
 	public static int p1Score;
 	public static int p2Score;
+
+	public static int[] rules;
+	private static int numRules;
+	private static int numChosenRules;
 	public static bool runRuleSelection;
-	GUIStyle buttonStyle;
-	Font buttonFont;
-
-	////////////////////////////////
-	//							  //
-	//							  //
-	//    Rule References Here    //
-	//							  //
-	//							  //
-	//							  //
-	////////////////////////////////
-
 
 	public Texture btnTexture;
+	private GUIStyle buttonStyle;
+	private Font buttonFont;
+
+	////////////////////////////////
+	//							  //
+	//       Rule Reference		  //
+	//							  //
+	////////////////////////////////
+
+	/*
+	A rule's default value is 0 (i.e. rule has not been chosen)
+	rules [0]	Background
+	rules [1]	Player speed (passive)
+	rules [2]	Player size (active)
+	*/
 
 	// Use this for initialization
 	void Start () {
+		p1Score = 0;
+		p2Score = 0;
+
+		numRules = 3;
+		numChosenRules = 0;
+		rules = new int[numRules];
+		runRuleSelection = false;
 
 		buttonStyle = new GUIStyle();
 		buttonFont = Resources.Load ("ButtonFont") as Font;
-
 		setupButtonStyle ();
 
-		p1Score = 0;
-		p2Score = 0;
-		runRuleSelection = false;
-
-		rules = new int[10];
-
-		rules [0] = 0; // Background
-		rules [1] = 2; // Player speed
-		rules [2] = 2; // Player size
-
 		DontDestroyOnLoad (gameObject);
-
 	}
 
 	void OnGUI() {
@@ -65,5 +65,33 @@ public class GameController : MonoBehaviour {
 		buttonStyle.alignment = TextAnchor.MiddleCenter;
 		buttonStyle.normal.background = Resources.Load ("buttonImage") as Texture2D;
 		buttonStyle.active.background = Resources.Load ("buttonPressedImage") as Texture2D;
+	}
+
+	public static int getRule() {
+		int[] unchosenRules = new int[numRules];
+		int unchosenRulesArrayLength = 0;
+
+		for (int i = 0; i < rules.Length; i++) {
+			if (rules [i] == 0) {
+				unchosenRules [unchosenRulesArrayLength] = i;
+				unchosenRulesArrayLength++;
+			}
+		}
+		return unchosenRules[Random.Range (0,unchosenRulesArrayLength)];
+	}
+
+	public static void setRule(int rule, int choice) {
+		if (numChosenRules < numRules) {
+			rules [rule] = choice;
+			numChosenRules++;
+		}
+	}
+
+	public static void getRulesInfo() {
+		print (
+			"Number of chosen rules = " + numChosenRules + "\n" +
+			"Number of unchosen rules = " + (numRules - numChosenRules)
+		);
+		print ("Rules Array: " + rules [0] + rules [1] + rules [2]);
 	}
 }
