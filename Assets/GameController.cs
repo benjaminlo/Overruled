@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class GameController : MonoBehaviour {
 
 	public static int[] rules;
@@ -22,9 +23,10 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		p1Score = 0;
 		p2Score = 0;
-	 
 		rules = new int[10];
 
-		rules [0] = 1;
+		rules [0] = 0;
+
+		DontDestroyOnLoad (gameObject);
 	}
 }
