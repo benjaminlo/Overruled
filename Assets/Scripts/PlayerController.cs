@@ -12,14 +12,14 @@ public class PlayerController : MonoBehaviour {
 
 	public string horizontalAxis, verticalAxis;
 
-	private static float activeDuration;
-	private static float cooldown;
-	private static float nextAction;
-	private static float activeTimer;
+	private float activeDuration;
+	private float cooldown;
+	private float nextAction;
+	private float activeTimer;
 
 	// Abilities and attributes
-	private static float speed;
-	private static Vector3 size;
+	private float speed;
+	private Vector3 size;
 
 	// Use this for initialization
 	void Start () {
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
 			activeTimer -= Time.deltaTime;
 	}
 
-	public static void updatePlayer() {
+	public void updatePlayer() {
 		switch (GameController.rules [1]) { // Passive ability
 		case 0:
 			speed = 5f;

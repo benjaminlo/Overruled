@@ -11,7 +11,9 @@ public class GoalController : MonoBehaviour {
 		GameController.setRule (rule, choice);
 
 		BackgroundController.updateBackground ();
-		PlayerController.updatePlayer ();
+
+		GameObject.Find ("Player1").GetComponent<PlayerController>().updatePlayer ();
+		GameObject.Find ("Player2").GetComponent<PlayerController>().updatePlayer ();
 
 		GameController.getRulesInfo ();
 
