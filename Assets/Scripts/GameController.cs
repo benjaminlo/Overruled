@@ -95,8 +95,8 @@ public class GameController : MonoBehaviour {
 	void setupButtonStyle(){
 		buttonStyle.font = buttonFont;
 		buttonStyle.alignment = TextAnchor.MiddleCenter;
-		//buttonStyle.normal.background = Resources.Load ("buttonImage") as Texture2D;
-		//buttonStyle.active.background = Resources.Load ("buttonPressedImage") as Texture2D;
+		buttonStyle.normal.background = Resources.Load ("buttonImage") as Texture2D;
+		buttonStyle.active.background = Resources.Load ("buttonPressedImage") as Texture2D;
 	}
 
 	private static int getRule() {
