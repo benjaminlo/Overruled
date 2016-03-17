@@ -6,22 +6,27 @@ public class GameController : MonoBehaviour {
 
 	public static int p1Score;
 	public static int p2Score;
+	public static int[] p1Rules;
+	public static int[] p2Rules;
 
 	public Transform goal;
 
-	public static int[] rules;
 	public static int numRules;
 	public static int numChosenRules;
-	public static bool displayRuleSelection;
-	private static int selectionRule1;
-	private static int selectionRule2;
-	private static int selectionRule3;
-	private static int selectionChoice1;
-	private static int selectionChoice2;
-	private static int selectionChoice3;
-	private static string selection1;
-	private static string selection2;
-	private static string selection3;
+	public static bool displayP1RuleSelection;
+	public static bool displayP2RuleSelection;
+	private static int p1SelectionRule1;
+	private static int p1SelectionRule2;
+	private static int p1SelectionRule3;
+	private static int p1SelectionChoice1;
+	private static int p1SelectionChoice2;
+	private static int p1SelectionChoice3;
+	private static int p2SelectionRule1;
+	private static int p2SelectionRule2;
+	private static int p2SelectionRule3;
+	private static int p2SelectionChoice1;
+	private static int p2SelectionChoice2;
+	private static int p2SelectionChoice3;
 
 	public Texture btnTexture;
 	private GUIStyle buttonStyle;
@@ -35,7 +40,7 @@ public class GameController : MonoBehaviour {
 
 	/*
 	A rule's default value is 0 (i.e. rule has not been chosen)
-	rules [0]	Background
+	rules [0]	EMPTY FOR NOW
 	rules [1]	Player speed (passive)
 	rules [2]	Player size (active)
 	*/
@@ -46,8 +51,10 @@ public class GameController : MonoBehaviour {
 
 		numRules = 3;
 		numChosenRules = 0;
-		rules = new int[numRules];
-		displayRuleSelection = false;
+		p1Rules = new int[numRules];
+		p2Rules = new int[numRules];
+		displayP1RuleSelection = false;
+		displayP2RuleSelection = false;
 
 		buttonStyle = new GUIStyle();
 		buttonFont = Resources.Load ("ButtonFont") as Font;
@@ -61,33 +68,51 @@ public class GameController : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (displayRuleSelection) {
-			if (GUI.Button (new Rect (Screen.width/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3), selection1, buttonStyle)) {
-				setRule (selectionRule1, selectionChoice1);
-				updatePlayersAndBackground ();
-				displayRuleSelection = false;
-				if (numChosenRules < numRules) 
-					Instantiate (goal);
-				
-				printRulesInfo ();
+		if (displayP1RuleSelection) {
+			if (GUI.Button (new Rect (Screen.width/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p1SelectionRule1 + "\nChoice: " + p1SelectionChoice1, buttonStyle)) {
+				setRule (p1Rules, p1SelectionRule1, p1SelectionChoice1);
+				displayP1RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
 			}
-			if (GUI.Button (new Rect (Screen.width*3/8, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3), selection2, buttonStyle)) {
-				setRule (selectionRule2, selectionChoice2);
-				updatePlayersAndBackground ();
-				displayRuleSelection = false;
-				if (numChosenRules < numRules) 
-					Instantiate (goal);
-				
-				printRulesInfo ();
+			if (GUI.Button (new Rect (Screen.width*3/8, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p1SelectionRule2 + "\nChoice: " + p1SelectionChoice2, buttonStyle)) {
+				setRule (p1Rules, p1SelectionRule2, p1SelectionChoice2);
+				displayP1RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
 			}
-			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3), selection3, buttonStyle)) {
-				setRule (selectionRule3, selectionChoice3);
-				updatePlayersAndBackground ();
-				displayRuleSelection = false;
-				if (numChosenRules < numRules) 
-					Instantiate (goal);
+			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p1SelectionRule3 + "\nChoice: " + p1SelectionChoice3, buttonStyle)) {
+				setRule (p1Rules, p1SelectionRule3, p1SelectionChoice3);
+				displayP1RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
+			}
+		}
 
-				printRulesInfo ();
+		if (displayP2RuleSelection) {
+			if (GUI.Button (new Rect (Screen.width/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p2SelectionRule1 + "\nChoice: " + p2SelectionChoice1, buttonStyle)) {
+				setRule (p2Rules, p2SelectionRule1, p2SelectionChoice1);
+				displayP2RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
+			}
+			if (GUI.Button (new Rect (Screen.width*3/8, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p2SelectionRule3 + "\nChoice: " + p2SelectionChoice2, buttonStyle)) {
+				setRule (p2Rules, p2SelectionRule2, p2SelectionChoice2);
+				displayP2RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
+			}
+			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height*19/20 - Screen.height*2/3, Screen.width/4, Screen.height*2/3),
+				"Rule: " + p2SelectionRule3 + "\nChoice: " + p2SelectionChoice3, buttonStyle)) {
+				setRule (p2Rules, p2SelectionRule3, p2SelectionChoice3);
+				displayP2RuleSelection = false;
+				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
+					updatePlayersAndBackground ();
 			}
 		}
 	}
@@ -99,7 +124,7 @@ public class GameController : MonoBehaviour {
 		buttonStyle.active.background = Resources.Load ("buttonPressedImage") as Texture2D;
 	}
 
-	private static int getRule() {
+	private static int getRule(int[] rules) {
 		int[] unchosenRules = new int[numRules];
 		int unchosenRulesArrayLength = 0;
 
@@ -113,25 +138,26 @@ public class GameController : MonoBehaviour {
 	}
 
 	public static void runRuleSelection() {
-		selectionRule1 = getRule ();
-		selectionRule2 = getRule ();
-		selectionRule3 = getRule ();
-		selectionChoice1 = Random.Range (1,3);
-		selectionChoice2 = Random.Range (1,3);
-		selectionChoice3 = Random.Range (1,3);
+		p1SelectionRule1 = getRule (p1Rules);
+		p1SelectionRule2 = getRule (p1Rules);
+		p1SelectionRule3 = getRule (p1Rules);
+		p1SelectionChoice1 = Random.Range (1,3);
+		p1SelectionChoice2 = Random.Range (1,3);
+		p1SelectionChoice3 = Random.Range (1,3);
 
-		selection1 = "Rule: " + selectionRule1 + "\nChoice: " + selectionChoice1;
-		selection2 = "Rule: " + selectionRule1 + "\nChoice: " + selectionChoice2;
-		selection3 = "Rule: " + selectionRule3 + "\nChoice: " + selectionChoice3;
+		p2SelectionRule1 = getRule (p2Rules);
+		p2SelectionRule2 = getRule (p2Rules);
+		p2SelectionRule3 = getRule (p2Rules);
+		p2SelectionChoice1 = Random.Range (1,3);
+		p2SelectionChoice2 = Random.Range (1,3);
+		p2SelectionChoice3 = Random.Range (1,3);
 
-		displayRuleSelection = true;
+		displayP1RuleSelection = true;
+		displayP2RuleSelection = true;
 	}
 
-	private static void setRule(int rule, int choice) {
-		if (numChosenRules < numRules) {
-			rules [rule] = choice;
-			numChosenRules++;
-		}
+	private static void setRule(int[] rules, int rule, int choice) {
+		rules [rule] = choice;
 	}
 
 	public static void printRulesInfo() {
@@ -139,12 +165,18 @@ public class GameController : MonoBehaviour {
 			"Number of chosen rules = " + numChosenRules + "\n" +
 			"Number of unchosen rules = " + (numRules - numChosenRules)
 		);
-		print ("Rules Array: " + rules [0] + rules [1] + rules [2]);
+		print ("p1Rules Array: " + p1Rules [0] + p1Rules [1] + p1Rules [2]);
+		print ("p2Rules Array: " + p2Rules [0] + p2Rules [1] + p2Rules [2]);
 	}
 
 	private void updatePlayersAndBackground() {
+		numChosenRules++;
 		BackgroundController.updateBackground ();
-		GameObject.Find ("Player1").GetComponent<PlayerController>().updatePlayer ();
-		GameObject.Find ("Player2").GetComponent<PlayerController>().updatePlayer ();
+		GameObject.Find ("Player1").GetComponent<PlayerController>().updatePlayer (p1Rules);
+		GameObject.Find ("Player2").GetComponent<PlayerController>().updatePlayer (p2Rules);
+		if(numChosenRules < numRules) {
+			Instantiate (goal);
+		}
+		printRulesInfo ();
 	}
 }

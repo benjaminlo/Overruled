@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GoalController : MonoBehaviour {
-
+	
 	Rigidbody2D body;
 	public Boundary boundary;
 
@@ -17,9 +17,5 @@ public class GoalController : MonoBehaviour {
 			Destroy (this);
 			Debug.Log ("Hello");
 		}
-	}
-	
-	void Update(){
-
 	}
 }

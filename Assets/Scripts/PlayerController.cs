@@ -59,8 +59,8 @@ public class PlayerController : MonoBehaviour {
 			activeTimer -= Time.deltaTime;
 	}
 
-	public void updatePlayer() {
-		switch (GameController.rules [1]) { // Passive ability
+	public void updatePlayer(int[] rules) {
+		switch (rules [1]) { // Passive ability
 		case 0:
 			speed = 5f;
 			break;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 			speed = 5f;
 			break;
 		}
-		switch (GameController.rules [2]) { // Active ability
+		switch (rules [2]) { // Active ability
 		case 0:
 			size = Vector3.one;
 			break;
