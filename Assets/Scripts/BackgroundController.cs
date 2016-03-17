@@ -13,7 +13,7 @@ public class BackgroundController : MonoBehaviour {
 	}
 
 	public static void updateBackground() {
-		switch (GameController.rules [0]) {
+		switch (Random.Range (1,3)) {
 		case 0:
 			break;
 		case 1:
