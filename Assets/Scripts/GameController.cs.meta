@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: ddf9e3fee7188e041ab32721e4a1e858
-timeCreated: 1454554827
+timeCreated: 1458444211
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - goalPrefab: {fileID: 496788, guid: d750bb260ee9ea04d9de334b5471f46f, type: 2}
+  - btnTexture: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
