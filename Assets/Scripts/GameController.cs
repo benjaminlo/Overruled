@@ -61,10 +61,12 @@ public class GameController : MonoBehaviour {
 		setupButtonStyle ();
 
 		DontDestroyOnLoad (gameObject);
+
 	}
 
 	void Start() {
-		Instantiate (goal);
+		Instantiate(goal);
+	
 	}
 
 	void OnGUI() {
