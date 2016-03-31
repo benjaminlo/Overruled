@@ -2,20 +2,29 @@
 using System.Collections;
 
 public class GoalController : MonoBehaviour {
-	
-	Rigidbody2D body;
-	public Boundary boundary;
 
-	void Start(){
-		body = GetComponent<Rigidbody2D> ();
+	private Transform player;
+	private string playerLastTouched;
+
+	void Awake(){
+		gameObject.tag = "Goal";
 	}
 
-	void OnTriggerExit2D(Collider2D other){
-		Debug.Log (other.name);
-		if (other.name == "Background") {
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.name == "Background" && !playerLastTouched.Equals(player.name)) {
+			GameObject []goals = GameObject.FindGameObjectsWithTag("Goal");
+			for(int i = 0; i< goals.Length; i++)
+				Destroy(goals[i]);
 			GameController.runRuleSelection();
-			Destroy (this);
-			Debug.Log ("Hello");
 		}
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag.Equals("Player"))
+			playerLastTouched = coll.gameObject.name;
+	}
+
+	public void setPlayer(Transform player) {
+		this.player = player;
 	}
 }

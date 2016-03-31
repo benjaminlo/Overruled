@@ -6,7 +6,6 @@ public class BackgroundController : MonoBehaviour {
 	private static Texture2D forestBackground;
 	private static Texture2D iceBackground;
 
-	// Use this for initialization
 	void Start () {
 		forestBackground = Resources.Load ("ForestBackground") as Texture2D;
 		iceBackground = Resources.Load ("IceBackground") as Texture2D;

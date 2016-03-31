@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 
 	public string horizontalAxis, verticalAxis;
 
+	private Vector3 startingPosition;
 	private float activeDuration;
 	private float cooldown;
 	private float nextAction;
@@ -21,12 +22,13 @@ public class PlayerController : MonoBehaviour {
 	private float speed;
 	private Vector3 size;
 
-	// Use this for initialization
-	void Start () {
+	void Awake () {
+		gameObject.tag = "Player";
+		startingPosition = gameObject.transform.position;
 		nextAction = 0.0f;
 		activeTimer = 0.0f;
 
-		// Set default values
+		// Set default attributes
 		speed = 5f;
 		size = Vector3.one;
 	}
@@ -45,8 +47,7 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp (body.position.y, boundary.yMin, boundary.yMax)
 		);
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetButton ("Fire1") && Time.time > nextAction) {
 			nextAction = Time.time + cooldown;
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void updatePlayer(int[] rules) {
+		resetPlayerPosition ();
+
 		switch (rules [1]) { // Passive ability
 		case 0:
 			speed = 5f;
@@ -92,5 +95,9 @@ public class PlayerController : MonoBehaviour {
 			size = Vector3.one;
 			break;
 		}
+	}
+
+	public void resetPlayerPosition() {
+		this.transform.position = startingPosition;
 	}
 }
