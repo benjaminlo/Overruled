@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour {
 	void Start() {
 		instantiateGoals ();
 	}
-	
+
 	private void instantiateGoals() {
 		Transform p1Goal = Instantiate (goalPrefab, GameObject.Find ("Player 1").transform.position + new Vector3 (-1, 0, 0), GameObject.Find ("Player 1").transform.rotation) as Transform;
 		Transform p2Goal = Instantiate (goalPrefab, GameObject.Find ("Player 2").transform.position + new Vector3 (1, 0, 0), GameObject.Find ("Player 2").transform.rotation) as Transform;
@@ -143,6 +143,10 @@ public class GameController : MonoBehaviour {
 		return unchosenRules[Random.Range (0,unchosenRulesArrayLength)];
 	}
 
+	private static void setRule(int[] rules, int rule, int choice) {
+		rules [rule] = choice;
+	}
+
 	public static void runRuleSelection() {
 		p1SelectionRule1 = getRule (p1Rules);
 		p1SelectionRule2 = getRule (p1Rules);
@@ -162,10 +166,6 @@ public class GameController : MonoBehaviour {
 		displayP2RuleSelection = true;
 	}
 
-	private static void setRule(int[] rules, int rule, int choice) {
-		rules [rule] = choice;
-	}
-
 	public static void printRulesInfo() {
 		print (
 			"Number of chosen rules = " + numChosenRules + "\n" +
@@ -173,6 +173,19 @@ public class GameController : MonoBehaviour {
 		);
 		print ("p1Rules Array: " + p1Rules [0] + p1Rules [1] + p1Rules [2]);
 		print ("p2Rules Array: " + p2Rules [0] + p2Rules [1] + p2Rules [2]);
+	}
+
+	public static void incrementScore(string scorer) {
+		switch (scorer) {
+		case "Player 1":
+			p1Score += 10;
+			break;
+		case "Player 2":
+			p2Score += 10;
+			break;
+		}
+		print ("Player 1 score: " + p1Score);
+		print ("Player 2 score: " + p2Score);
 	}
 
 	private void updatePlayersAndBackground() {
