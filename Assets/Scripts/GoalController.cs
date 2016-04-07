@@ -27,7 +27,7 @@ public class GoalController : MonoBehaviour {
 			playerLastTouched = coll.gameObject.name;
 			gameObject.layer = LayerMask.NameToLayer ("Destroy");
 		} else
-			gameObject.layer = LayerMask.NameToLayer ("Safe");
+			gameObject.layer = LayerMask.NameToLayer ("Default");
 	}
 
 	public void setPlayer(Transform player) {
