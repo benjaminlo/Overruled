@@ -20,22 +20,12 @@ public class GoalController : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag.Equals ("Border") && playerLastTouched.Equals (player.name)) {
-			if (other.name == "Top Border" || other.name == "Bottom Border") {
-				Rigidbody2D body = GetComponent<Rigidbody2D> ();
-				body.velocity = new Vector2 (body.velocity.x, body.velocity.y * (-1));
-			}
-			if (other.name == "Right Border" || other.name == "Left Border") {
-				Rigidbody2D body = GetComponent<Rigidbody2D> ();
-				body.velocity = new Vector2 (body.velocity.x * (-1), body.velocity.y);
-			}
-		}
-	}
-
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag.Equals("Player"))
+		if (coll.gameObject.tag.Equals ("Player") && !coll.gameObject.name.Equals(player.name)) {
 			playerLastTouched = coll.gameObject.name;
+			gameObject.layer = LayerMask.NameToLayer ("Destroy");
+		} else
+			gameObject.layer = LayerMask.NameToLayer ("Safe");
 	}
 
 	public void setPlayer(Transform player) {
