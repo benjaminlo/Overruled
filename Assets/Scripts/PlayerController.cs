@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 
 	public string horizontalAxis, verticalAxis;
+	public string firstAction;
+	public string secondAction;
+	public string thirdAction;
 
 	private Vector3 startingPosition;
 	private float activeDuration;
@@ -49,7 +52,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetButton ("Fire1") && Time.time > nextAction) {
+		if (Input.GetButton (firstAction) && Time.time > nextAction) {
 			nextAction = Time.time + cooldown;
 			activeTimer = activeDuration;
 			transform.localScale = size; // Perform action
