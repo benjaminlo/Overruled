@@ -5,9 +5,11 @@ public class GoalController : MonoBehaviour {
 
 	private Transform player;
 	private string playerLastTouched;
+	private GameController gameController;
 
 	void Awake(){
 		gameObject.tag = "Goal";
+		gameController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
@@ -15,8 +17,8 @@ public class GoalController : MonoBehaviour {
 			GameObject []goals = GameObject.FindGameObjectsWithTag("Goal");
 			for(int i = 0; i< goals.Length; i++)
 				Destroy(goals[i]);
-			GameController.incrementScore (playerLastTouched);
-			GameController.runRuleSelection();
+			gameController.incrementScore (playerLastTouched);
+			gameController.runRuleSelection();
 		}
 	}
 
