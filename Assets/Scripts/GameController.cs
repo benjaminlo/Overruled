@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	
 	public Transform goalPrefab;
 
+	private GUIStyle buttonStyle;
+	public Button playAgainButton;
 	public GUIText p1ScoreText;
 	public GUIText p2ScoreText;
+
 	private int p1Score;
 	private int p2Score;
-
-	public Texture btnTexture;
-	private GUIStyle buttonStyle;
 
 	private int[] p1Rules;
 	private int[] p2Rules;
@@ -47,12 +48,11 @@ public class GameController : MonoBehaviour {
 	*/
 
 	void Awake () {
-		DontDestroyOnLoad (gameObject);
+		setButtonStyle ();
+		playAgainButton.gameObject.SetActive(false);
 
 		p1Score = 0;
 		p2Score = 0;
-
-		setButtonStyle ();
 
 		numRules = 3;
 		numChosenRules = 0;
@@ -197,9 +197,15 @@ public class GameController : MonoBehaviour {
 		BackgroundController.updateBackground ();
 		GameObject.Find ("Player 1").GetComponent<PlayerController>().updatePlayer (p1Rules);
 		GameObject.Find ("Player 2").GetComponent<PlayerController>().updatePlayer (p2Rules);
-		if(numChosenRules < numRules) {
+		if (numChosenRules < numRules) {
 			instantiateGoals ();
-		}
+		} else
+			playAgainButton.gameObject.SetActive(true);
+			
 		printRulesInfo ();
+	}
+
+	public void playAgain() {
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 }
