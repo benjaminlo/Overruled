@@ -6,8 +6,15 @@ public class Boundary{
 	public float xMin, xMax, yMin, yMax;
 }
 
+enum ButtonCycle{
+	open,
+	pressed,
+	released
+}
+
 public class PlayerController : MonoBehaviour {
 
+	public Transform bulletPrefab;
 	public Boundary boundary;
 
 	public string horizontalAxis, verticalAxis;
@@ -20,10 +27,13 @@ public class PlayerController : MonoBehaviour {
 	private float cooldown;
 	private float nextAction;
 	private float activeTimer;
+	private Vector2 direction;
+	private ButtonCycle shootCycle;
 
 	// Abilities and attributes
 	private float speed;
 	private Vector3 size;
+	private Rigidbody2D body;
 
 	void Awake () {
 		gameObject.tag = "Player";
@@ -34,13 +44,32 @@ public class PlayerController : MonoBehaviour {
 		// Set default attributes
 		speed = 5f;
 		size = Vector3.one;
+
+		shootCycle = ButtonCycle.open;
 	}
 
 	void FixedUpdate(){
 		float moveHorizontal = Input.GetAxis (horizontalAxis);
 		float moveVertical = Input.GetAxis (verticalAxis);
 
-		Rigidbody2D body = GetComponent<Rigidbody2D> ();
+		body = GetComponent<Rigidbody2D> ();
+		Vector2 factor = new Vector2(0, 0);
+
+		if (body.velocity.x > 0)
+			factor.x = 3;
+		if (body.velocity.x < 0)
+			factor.x = -3;
+
+		if (body.velocity.y > 0)
+			factor.y = 3;
+		if (body.velocity.y < 0)
+			factor.y = -3;
+
+		direction = new Vector2 (body.velocity.x + factor.x, body.velocity.y + factor.y);
+
+		if (direction == new Vector2(0, 0)){
+			direction = new Vector2(body.position.x / Mathf.Abs(body.position.x) * (-3), 0);
+		}
 
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 		body.velocity = movement * speed;
@@ -56,6 +85,26 @@ public class PlayerController : MonoBehaviour {
 			nextAction = Time.time + cooldown;
 			activeTimer = activeDuration;
 			transform.localScale = size; // Perform action
+		}
+
+
+		switch (shootCycle) {
+		case ButtonCycle.open:
+			if(Input.GetButton (secondAction))
+				shootCycle = ButtonCycle.pressed;
+			break;
+		
+		case ButtonCycle.pressed:
+			if(!Input.GetButton (secondAction))
+				shootCycle = ButtonCycle.released;
+			break;
+
+		case ButtonCycle.released:       
+			Transform bullet = Instantiate (bulletPrefab, gameObject.transform.position + new Vector3 (-1, 0, 0), gameObject.transform.rotation) as Transform;
+			bullet.GetComponent<BulletController>().setDirection(direction);
+			shootCycle = ButtonCycle.open;
+			break;
+		
 		}
 		if (activeTimer < 0) { 
 			transform.localScale = Vector3.one; // Reset active ability

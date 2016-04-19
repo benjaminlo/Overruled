@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	
@@ -206,6 +206,6 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void playAgain() {
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 }
