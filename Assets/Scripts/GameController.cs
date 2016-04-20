@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	
 	public Transform goalPrefab;
 
 	private GUIStyle buttonStyle;
+	private Canvas p1RuleSelectionUi;
+	private Canvas p2RuleSelectionUi;
+	private Text p1ScoreText;
+	private Text p2ScoreText;
+	private Text winnerText;
 	public Button playAgainButton;
-	public GUIText p1ScoreText;
-	public GUIText p2ScoreText;
 
 	private int p1Score;
 	private int p2Score;
 
+	private string[,] ruleDescriptions;
 	private int[] p1Rules;
 	private int[] p2Rules;
 	private int numRules;
 	private int numChosenRules;
-	private bool displayP1RuleSelection;
-	private bool displayP2RuleSelection;
 	private int p1SelectionRule1;
 	private int p1SelectionRule2;
 	private int p1SelectionRule3;
@@ -48,24 +50,35 @@ public class GameController : MonoBehaviour {
 	*/
 
 	void Awake () {
-		setButtonStyle ();
-		playAgainButton.gameObject.SetActive(false);
+		p1RuleSelectionUi = GameObject.Find ("P1 Rule Selection").GetComponent<Canvas>();
+		p2RuleSelectionUi = GameObject.Find ("P2 Rule Selection").GetComponent<Canvas>();
+		playAgainButton = GameObject.Find ("Play Again Button").GetComponent<Button>();
+		p1ScoreText = GameObject.Find ("Player 1 Score").GetComponent<Text> ();
+		p2ScoreText = GameObject.Find ("Player 2 Score").GetComponent<Text> ();
+		winnerText = GameObject.Find ("Winner Text").GetComponent<Text> ();
 
 		p1Score = 0;
 		p2Score = 0;
 
 		numRules = 3;
 		numChosenRules = 0;
+		ruleDescriptions = new string [3, 3] {
+			{ "EMPTY", "", "" }, 
+			{ "Player Speed", "1/2x", "2x" },
+			{ "Player Size", "1/2x", "2x" }
+		};
 		p1Rules = new int[numRules];
 		p2Rules = new int[numRules];
-		displayP1RuleSelection = false;
-		displayP2RuleSelection = false;
 	}
 
 	void Start() {
+		p1RuleSelectionUi.gameObject.SetActive (false);
+		p2RuleSelectionUi.gameObject.SetActive (false);
+		playAgainButton.gameObject.SetActive (false);
 		instantiateGoals ();
 		p1ScoreText.text = "P1 Score: " + p1Score;
 		p2ScoreText.text = "P2 Score: " + p2Score;
+		winnerText.text = "";
 	}
 
 	private void instantiateGoals() {
@@ -73,65 +86,6 @@ public class GameController : MonoBehaviour {
 		Transform p2Goal = Instantiate (goalPrefab, GameObject.Find ("Player 2").transform.position + new Vector3 (1, 0, 0), GameObject.Find ("Player 2").transform.rotation) as Transform;
 		p1Goal.GetComponent<GoalController> ().setPlayer (GameObject.Find ("Player 1").transform);
 		p2Goal.GetComponent<GoalController> ().setPlayer (GameObject.Find ("Player 2").transform);
-	}
-
-	void setButtonStyle(){
-		Font buttonFont = Resources.Load ("ButtonFont") as Font;
-		buttonStyle = new GUIStyle();
-		buttonStyle.font = buttonFont;
-		buttonStyle.alignment = TextAnchor.MiddleCenter;
-		buttonStyle.normal.background = Resources.Load ("buttonImage") as Texture2D;
-		buttonStyle.active.background = Resources.Load ("buttonPressedImage") as Texture2D;
-	}
-
-	void OnGUI() {
-		if (displayP1RuleSelection) {
-			if (GUI.Button (new Rect (Screen.width/16, Screen.height/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p1SelectionRule1 + "\nChoice: " + p1SelectionChoice1, buttonStyle)) {
-				setRule (p1Rules, p1SelectionRule1, p1SelectionChoice1);
-				displayP1RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-			if (GUI.Button (new Rect (Screen.width/16, Screen.height*6/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p1SelectionRule2 + "\nChoice: " + p1SelectionChoice2, buttonStyle)) {
-				setRule (p1Rules, p1SelectionRule2, p1SelectionChoice2);
-				displayP1RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-			if (GUI.Button (new Rect (Screen.width/16, Screen.height*11/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p1SelectionRule3 + "\nChoice: " + p1SelectionChoice3, buttonStyle)) {
-				setRule (p1Rules, p1SelectionRule3, p1SelectionChoice3);
-				displayP1RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-		}
-
-		if (displayP2RuleSelection) {
-			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p2SelectionRule1 + "\nChoice: " + p2SelectionChoice1, buttonStyle)) {
-				setRule (p2Rules, p2SelectionRule1, p2SelectionChoice1);
-				displayP2RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height*6/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p2SelectionRule3 + "\nChoice: " + p2SelectionChoice2, buttonStyle)) {
-				setRule (p2Rules, p2SelectionRule2, p2SelectionChoice2);
-				displayP2RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-			if (GUI.Button (new Rect (Screen.width*11/16, Screen.height*11/16, Screen.width/4, Screen.height/4),
-				"Rule: " + p2SelectionRule3 + "\nChoice: " + p2SelectionChoice3, buttonStyle)) {
-				setRule (p2Rules, p2SelectionRule3, p2SelectionChoice3);
-				displayP2RuleSelection = false;
-				if (displayP1RuleSelection == false && displayP2RuleSelection == false)
-					updateGame ();
-			}
-		}
 	}
 
 	private int getRule(int[] rules) {
@@ -166,8 +120,49 @@ public class GameController : MonoBehaviour {
 		p2SelectionChoice2 = Random.Range (1,3);
 		p2SelectionChoice3 = Random.Range (1,3);
 
-		displayP1RuleSelection = true;
-		displayP2RuleSelection = true;
+		p1RuleSelectionUi.gameObject.SetActive (true);
+		GameObject.Find ("P1 Top Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p1SelectionRule1, 0] + "\n" + ruleDescriptions [p1SelectionRule1, p1SelectionChoice1];
+		GameObject.Find ("P1 Middle Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p1SelectionRule2, 0] + "\n" + ruleDescriptions [p1SelectionRule2, p1SelectionChoice2];
+		GameObject.Find ("P1 Bottom Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p1SelectionRule3, 0] + "\n" + ruleDescriptions [p1SelectionRule3, p1SelectionChoice3];
+
+		p2RuleSelectionUi.gameObject.SetActive (true);
+		GameObject.Find ("P2 Top Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p2SelectionRule1, 0] + "\n" + ruleDescriptions [p2SelectionRule1, p2SelectionChoice1];
+		GameObject.Find ("P2 Middle Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p2SelectionRule2, 0] + "\n" + ruleDescriptions [p2SelectionRule2, p2SelectionChoice2];
+		GameObject.Find ("P2 Bottom Button").GetComponentInChildren<Text> ().text = ruleDescriptions [p2SelectionRule3, 0] + "\n" + ruleDescriptions [p2SelectionRule3, p2SelectionChoice3];
+	}
+
+	public void onP1RuleSelection(int buttonPosition) {
+		switch (buttonPosition) {
+		case 1:
+			setRule (p1Rules, p1SelectionRule1, p1SelectionChoice1);
+			break;
+		case 2:
+			setRule (p1Rules, p1SelectionRule2, p1SelectionChoice2);
+			break;
+		case 3:
+			setRule (p1Rules, p1SelectionRule3, p1SelectionChoice3);
+			break;
+		}
+		p1RuleSelectionUi.gameObject.SetActive (false);
+		if (!p1RuleSelectionUi.isActiveAndEnabled && !p2RuleSelectionUi.isActiveAndEnabled)
+			updateGame ();
+	}
+
+	public void onP2RuleSelection(int buttonPosition) {
+		switch (buttonPosition) {
+		case 1:
+			setRule (p2Rules, p2SelectionRule1, p2SelectionChoice1);
+			break;
+		case 2:
+			setRule (p2Rules, p2SelectionRule2, p2SelectionChoice2);
+			break;
+		case 3:
+			setRule (p2Rules, p2SelectionRule3, p2SelectionChoice3);
+			break;
+		}
+		p2RuleSelectionUi.gameObject.SetActive (false);
+		if (!p1RuleSelectionUi.isActiveAndEnabled && !p2RuleSelectionUi.isActiveAndEnabled)
+			updateGame ();
 	}
 
 	public void printRulesInfo() {
@@ -199,13 +194,18 @@ public class GameController : MonoBehaviour {
 		GameObject.Find ("Player 2").GetComponent<PlayerController>().updatePlayer (p2Rules);
 		if (numChosenRules < numRules) {
 			instantiateGoals ();
-		} else
-			playAgainButton.gameObject.SetActive(true);
+		} else {
+			playAgainButton.gameObject.SetActive (true);
+			if (p1Score > p2Score)
+				winnerText.text = "PLAYER 1 WINS!";
+			else
+				winnerText.text = "PLAYER 2 WINS!";
+		}
 			
 		printRulesInfo ();
 	}
 
 	public void playAgain() {
-		//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 }

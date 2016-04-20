@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour {
 			speed = 5f;
 			break;
 		case 1:
-			speed = 0.5f;
+			speed = 2.5f;
 			break;
 		case 2:
 			speed = 10f;
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour {
 			activeDuration = 3f;
 			break;
 		case 2:
-			size = new Vector3 (5f, 5f, 0);
+			size = new Vector3 (2.0f, 2.0f, 0);
 			cooldown = 3f;
 			activeDuration = 3f;
 			break;
