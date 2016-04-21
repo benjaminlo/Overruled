@@ -22,29 +22,28 @@ public class PlayerController : MonoBehaviour {
 	public string secondAction;
 	public string thirdAction;
 
-	private Vector3 startingPosition;
+	private int[] rules;
 	private float activeDuration;
 	private float cooldown;
 	private float nextAction;
 	private float activeTimer;
+	private Vector3 startingPosition;
 	private Vector2 direction;
 	private Vector2 factor;
 	private ButtonCycle shootCycle;
+	private Rigidbody2D body;
 
 	// Abilities and attributes
 	private float speed;
 	private Vector3 size;
-	private Rigidbody2D body;
 
 	void Awake () {
 		gameObject.tag = "Player";
+
 		startingPosition = gameObject.transform.position;
+
 		nextAction = 0.0f;
 		activeTimer = 0.0f;
-
-		// Set default attributes
-		speed = 5f;
-		size = Vector3.one;
 
 		shootCycle = ButtonCycle.open;
 	}
@@ -55,7 +54,6 @@ public class PlayerController : MonoBehaviour {
 
 		body = GetComponent<Rigidbody2D> ();
 		factor = new Vector2 (0, 0);
-
 
 		if (body.velocity.x > 0)
 			factor.x = 3;
@@ -91,31 +89,34 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetButton (firstAction) && Time.time > nextAction) {
-			nextAction = Time.time + cooldown;
-			activeTimer = activeDuration;
-			transform.localScale = size; // Perform action
-		}
-
-
 		switch (shootCycle) {
 		case ButtonCycle.open:
-			if(Input.GetButton (secondAction))
+			if(Input.GetButton (firstAction))
 				shootCycle = ButtonCycle.pressed;
 			break;
-		
 		case ButtonCycle.pressed:
-			if(!Input.GetButton (secondAction))
+			if(!Input.GetButton (firstAction))
 				shootCycle = ButtonCycle.released;
 			break;
-
 		case ButtonCycle.released:
 			Transform bullet = Instantiate (bulletPrefab, gameObject.transform.position + new Vector3 (factor.x/Mathf.Abs(factor.x), 0, 0), gameObject.transform.rotation) as Transform;
 			bullet.GetComponent<BulletController>().setDirection(direction);
 			shootCycle = ButtonCycle.open;
 			break;
-		
 		}
+
+		if (Input.GetButton (secondAction) && Time.time > nextAction) {
+			nextAction = Time.time + cooldown;
+			activeTimer = activeDuration;
+			grow ();
+		}
+
+		if (Input.GetButton (thirdAction) && Time.time > nextAction) {
+			nextAction = Time.time + cooldown;
+			activeTimer = activeDuration;
+			shrink ();
+		}
+
 		if (activeTimer < 0) { 
 			transform.localScale = Vector3.one; // Reset active ability
 		} else
@@ -123,43 +124,60 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void updatePlayer(int[] rules) {
+		this.rules = rules;
 		resetPlayerPosition ();
+		updatePassiveAttributes ();
+	}
 
-		switch (rules [1]) { // Passive ability
+	public void resetPlayerPosition() {
+		this.transform.position = startingPosition;
+	}
+		
+	private void updatePassiveAttributes (){
+		switch (rules [0]) {
 		case 0:
 			speed = 5f;
 			break;
 		case 1:
-			speed = 2.5f;
+			speed = 7.5f;
 			break;
 		case 2:
 			speed = 10f;
 			break;
-		default:
-			speed = 5f;
+		}
+	}
+
+	private void grow() {
+		switch (rules [1]) {
+		case 0:
+			size = Vector3.one;
+			break;
+		case 1:
+			size = new Vector3 (2f, 2f, 0);
+			break;
+		case 2:
+			size = new Vector3 (3f, 3f, 0);
 			break;
 		}
-		switch (rules [2]) { // Active ability
+		cooldown = 3f;
+		activeDuration = 3f;
+		this.transform.localScale = size;
+	}
+
+	private void shrink() {
+		switch (rules [2]) {
 		case 0:
 			size = Vector3.one;
 			break;
 		case 1:
 			size = new Vector3 (0.5f, 0.5f, 0);
-			cooldown = 3f;
-			activeDuration = 3f;
 			break;
 		case 2:
-			size = new Vector3 (2.0f, 2.0f, 0);
-			cooldown = 3f;
-			activeDuration = 3f;
-			break;
-		default:
-			size = Vector3.one;
+			size = new Vector3 (0.33f, 0.33f, 0);
 			break;
 		}
-	}
-
-	public void resetPlayerPosition() {
-		this.transform.position = startingPosition;
+		cooldown = 3f;
+		activeDuration = 3f;
+		this.transform.localScale = size;
 	}
 }

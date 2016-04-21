@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GoalController : MonoBehaviour {
 
+	private GameController gameController;
 	private Transform player;
 	private string playerLastTouched;
-	private GameController gameController;
 
 	void Awake(){
 		gameObject.tag = "Goal";
@@ -18,7 +18,6 @@ public class GoalController : MonoBehaviour {
 			for(int i = 0; i< goals.Length; i++)
 				Destroy(goals[i]);
 			gameController.incrementScore (playerLastTouched);
-			gameController.runRuleSelection();
 		}
 	}
 

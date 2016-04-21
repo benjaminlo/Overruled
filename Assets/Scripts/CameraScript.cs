@@ -6,19 +6,20 @@ public class CameraScript : MonoBehaviour {
 	public float aspectX;
 	public float aspectY;
 
-	// Use this for initialization
+	private Rect rect;
+	private float targetaspect;
+	private float windowaspect;
+	private float scaleheight;
+	private float scalewidth;
+
 	void Start () {
-		float targetaspect = aspectX / aspectY;
-		
-		float windowaspect = (float)Screen.width / (float)Screen.height;
-		
-		float scaleheight = windowaspect / targetaspect;
-		
 		Camera camera = GetComponent<Camera>();
+		targetaspect = aspectX / aspectY;
+		windowaspect = (float)Screen.width / (float)Screen.height;
+		scaleheight = windowaspect / targetaspect;
 		
-		if (scaleheight < 1.0f)
-		{  
-			Rect rect = camera.rect;
+		if (scaleheight < 1.0f)	{  
+			rect = camera.rect;
 			
 			rect.width = 1.0f;
 			rect.height = scaleheight;
@@ -26,12 +27,10 @@ public class CameraScript : MonoBehaviour {
 			rect.y = (1.0f - scaleheight) / 2.0f;
 			
 			camera.rect = rect;
-		}
-		else
-		{
-			float scalewidth = 1.0f / scaleheight;
+		} else {
+			scalewidth = 1.0f / scaleheight;
 			
-			Rect rect = camera.rect;
+			rect = camera.rect;
 			
 			rect.width = scalewidth;
 			rect.height = 1.0f;
