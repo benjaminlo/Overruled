@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 	private float nextAction;
 	private float activeTimer;
 	private Vector2 direction;
+	private Vector2 factor;
 	private ButtonCycle shootCycle;
 
 	// Abilities and attributes
@@ -53,7 +54,8 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxis (verticalAxis);
 
 		body = GetComponent<Rigidbody2D> ();
-		Vector2 factor = new Vector2(0, 0);
+		factor = new Vector2 (0, 0);
+
 
 		if (body.velocity.x > 0)
 			factor.x = 3;
@@ -64,6 +66,14 @@ public class PlayerController : MonoBehaviour {
 			factor.y = 3;
 		if (body.velocity.y < 0)
 			factor.y = -3;
+
+		if (factor.x == 0) {
+			if (direction.x >= 0) {
+				factor.x = -3;
+			} else {
+				factor.x = 3;
+			}
+		}
 
 		direction = new Vector2 (body.velocity.x + factor.x, body.velocity.y + factor.y);
 
@@ -99,8 +109,8 @@ public class PlayerController : MonoBehaviour {
 				shootCycle = ButtonCycle.released;
 			break;
 
-		case ButtonCycle.released:       
-			Transform bullet = Instantiate (bulletPrefab, gameObject.transform.position + new Vector3 (-1, 0, 0), gameObject.transform.rotation) as Transform;
+		case ButtonCycle.released:
+			Transform bullet = Instantiate (bulletPrefab, gameObject.transform.position + new Vector3 (factor.x/Mathf.Abs(factor.x), 0, 0), gameObject.transform.rotation) as Transform;
 			bullet.GetComponent<BulletController>().setDirection(direction);
 			shootCycle = ButtonCycle.open;
 			break;
